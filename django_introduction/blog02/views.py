@@ -8,6 +8,12 @@ from blog02.models import Article02
 def hello(request):
     return HttpResponse("Hello, world")
 
+def orm(request):
+
+    Article02.objects.create(title='增加标题一', category_id=3, body='增加内容一', user_id=1)
+
+    return HttpResponse("orm")
+
 def index(request):
     blog_index = Article02.objects.all().order_by('-id')
     context = {

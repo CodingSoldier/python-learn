@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from blog import models
 from blog.models import Article
 from django.core.paginator import Paginator
 
 
-
 def hello_world(request):
     return HttpResponse("Hello World")
+
 
 def article_content(request):
     article = Article.objects.all()[0]
@@ -20,6 +22,7 @@ def article_content(request):
         % (title, brief_content, content, article_id, publish_date)
 
     return HttpResponse(str)
+
 
 def get_index_page(request):
     page = request.GET.get('page')

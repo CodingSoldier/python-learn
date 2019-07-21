@@ -6,4 +6,6 @@ urlpatterns = [
     path('', views.hello),
     path('index/', views.index, name='index'),
     path('method01/', views.method01),
+
+    path('orm', views.orm),
 ]
