@@ -18,13 +18,14 @@ server.bind(("0.0.0.0", 8000))
 server.listen()
 sock, addr = server.accept()
 
-data = sock.recv(1024)
-print("接收数据  ", data.decode("utf8"))
+while True:
+    data = sock.recv(1024)
+    print(data.decode("utf8"))
+    re_data = input()
+    sock.send(re_data.encode("utf8"))
 
-sock.send("hello {}".format(data.decode("utf8")).encode("utf8"))
-
-server.close()
-sock.close()
+    # server.close()
+    # sock.close()
 
 
 
