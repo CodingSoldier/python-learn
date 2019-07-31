@@ -1,0 +1,8 @@
+idea创建项目django_rest
+
+创建app django-admin startapp quickstart
+
+
+
+
+
