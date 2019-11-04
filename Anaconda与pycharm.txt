@@ -1,0 +1,13 @@
+1、安装Anaconda时，需要勾选添加环境变量
+2、Pycharm  > Settings > Project Interpreter > Add > Conda Environment > Existing environment 
+   Interpreter 选择 D:\ProgramData\Anaconda3\python.exe
+   Conda executeble 默认即可
+
+运行代码测试
+
+import numpy
+import matplotlib
+import sklearn
+import pandas
+
+print("运行吗")
